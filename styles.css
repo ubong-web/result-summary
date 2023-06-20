@@ -1,0 +1,192 @@
+:root {
+  /*---Primary Color ---*/
+  --Light-red: hsl(0, 100%, 67%);
+  --Orange-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  /*--- Gradient color -- */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+  /*--- Neutral ---*/
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --very-Light-red: hsl(0, 30%, 71%);
+  --Very-light-Orange-yellow: hsl(39, 38%, 55%);
+}
+
+* Box sizing rules */ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Fraunces", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  border-radius: 10px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 800px;
+}
+.result-score {
+  background-color: var(--Light-royal-blue);
+  color: var();
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+.circle {
+  background-color: var(--Violet-blue-circle);
+  border-radius: 100%;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  /* padding: 10px 10px 20px 20px; */
+}
+
+.center,
+h3,
+p {
+  /* margin: 10px; */
+}
+.center {
+  color: var(--Pale-blue);
+  font-size: 3rem;
+}
+.p-center,
+.score_heading {
+  color: var(--Light-lavender);
+}
+.list-item {
+  list-style: none;
+}
+.list-image {
+  display: inline-block;
+  padding-right: 10px;
+}
+.score {
+  padding-left: 10px;
+}
+.congrat_message {
+  color: var(--White);
+  margin-top: 20px;
+  font-size: 30px;
+}
+.congrat_score {
+  color: var(--Light-lavender);
+}
+#result {
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+}
+#result.Reaction {
+  background-color: var(--very-Light-red);
+}
+#result.Memory {
+  background-color: var(--Very-light-Orange-yellow);
+}
+
+@media screen and (max-width: 37.5rem) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "img" "text";
+    margin: 30px;
+    max-width: 100%;
+  }
+  /* .result-score {
+  } */
+  .result-score {
+    background-color: var(--Light-royal-blue);
+    color: var();
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px 10px 40px 40px;
+  }
+  .container {
+    margin: 0px;
+  }
+}
