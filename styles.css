@@ -7,7 +7,7 @@
   /*--- Gradient color -- */
   --Light-slate-blue: hsl(252, 100%, 67%);
   --Light-royal-blue: hsl(241, 81%, 54%);
-  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+  --Violet-blue-circle: rgba(67, 19, 198, 0.968);
   --Persian-blue-circle: hsla(241, 72%, 46%, 0);
   /*--- Neutral ---*/
   --White: hsl(0, 0%, 100%);
@@ -16,6 +16,8 @@
   --Dark-gray-blue: hsl(224, 30%, 27%);
   --very-Light-red: hsl(0, 30%, 71%);
   --Very-light-Orange-yellow: hsl(39, 38%, 55%);
+  --Very-Green-teal: hsl(166, 67%, 82%);
+  --Very-Cobalt-blue: hsl(234, 66%, 79%);
 }
 
 * Box sizing rules */ *,
@@ -105,6 +107,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 800px;
+  /* margin: 30px; */
 }
 .result-score {
   background-color: var(--Light-royal-blue);
@@ -117,10 +120,10 @@ main {
   background-color: var(--Violet-blue-circle);
   border-radius: 100%;
   display: inline-block;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
   margin-top: 10px;
   /* padding: 10px 10px 20px 20px; */
 }
@@ -134,8 +137,11 @@ p {
   color: var(--Pale-blue);
   font-size: 3rem;
 }
-.p-center,
 .score_heading {
+  color: var(--Light-lavender);
+  font-size: 1.5rem;
+}
+.p-center {
   color: var(--Light-lavender);
 }
 .list-item {
@@ -163,9 +169,42 @@ p {
 }
 #result.Reaction {
   background-color: var(--very-Light-red);
+  border-radius: 10px;
 }
 #result.Memory {
   background-color: var(--Very-light-Orange-yellow);
+  border-radius: 10px;
+}
+#result.Verbal {
+  background-color: var(--Very-Green-teal);
+  border-radius: 10px;
+}
+#result.Visual {
+  background-color: var(--Very-Cobalt-blue);
+  border-radius: 10px;
+}
+
+.category {
+  padding-left: 20px;
+}
+.score {
+  padding-left: 80px;
+}
+.summary {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 9rem;
+  padding-left: 9rem;
+  border-radius: 20px;
+  margin-left: 1.3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
 }
 
 @media screen and (max-width: 37.5rem) {
@@ -173,7 +212,7 @@ p {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "img" "text";
-    margin: 30px;
+    /* margin: 30px; */
     max-width: 100%;
   }
   /* .result-score {
@@ -184,9 +223,6 @@ p {
     padding: 30px;
     width: 350px;
     text-align: center;
-    border-radius: 10px 10px 40px 40px;
-  }
-  .container {
-    margin: 0px;
+    border-radius: 0px 0px 40px 40px;
   }
 }
